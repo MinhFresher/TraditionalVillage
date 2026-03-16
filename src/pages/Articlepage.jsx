@@ -60,12 +60,12 @@ export default function ArticlePage() {
           <img src={logo} alt="Logo" style={{width: 50}}/>
         </div>
         <nav className="nav-links">
-          <a href="/">Trang chủ</a>
-          <a href="/introduce">Giới thiệu</a>
-          <a href="/products">Sản phẩm</a>
-          <a href="/activities">Hoạt động</a>
-          <a href="/news" className="active">Tin tức</a>
-          <a href="/gallery">Hình ảnh</a>
+          <Link to="/">Trang chủ</Link>
+          <Link to="/introduce" className="active">Giới thiệu</Link>
+          <Link to="/products">Sản phẩm</Link>
+          <Link to="/activities">Hoạt động</Link>
+          <Link to="/news">Tin tức</Link>
+          <Link to="/gallery">Hình ảnh</Link>
         </nav>
         <div className="nav-actions">
           <Link to="/login"><button className="btn-login-light">Đăng nhập</button></Link>
@@ -165,11 +165,12 @@ export default function ArticlePage() {
           <div className="footer-brand">
             <p>Chúng tôi mang đến trải nghiệm tham quan thuận tiện nhất, với kế hoạch chu đáo và người dẫn đường thấu hiểu văn hóa địa phương.</p>
             <nav className="footer-nav">
-              <a href="/">Trang chủ</a>
-              <a href="/introduce">Giới thiệu</a>
-              <a href="/products">Sản phẩm</a>
-              <a href="/news">Tin tức</a>
-              <a href="/activities">Hoạt động</a>
+              <Link to="/">Trang chủ</Link>
+              <Link to="/introduce" className="active">Giới thiệu</Link>
+              <Link to="/products">Sản phẩm</Link>
+              <Link to="/activities">Hoạt động</Link>
+              <Link to="/news">Tin tức</Link>
+            <Link to="/gallery">Hình ảnh</Link>
             </nav>
           </div>
             <div className="footer-newsletter">

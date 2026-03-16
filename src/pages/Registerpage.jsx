@@ -1,6 +1,6 @@
 import "../styles/Authpage.css";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export default function RegisterPage() {
     const navigate = useNavigate();
     
@@ -22,7 +22,8 @@ export default function RegisterPage() {
             <input type="password" id="password" placeholder="Nhập mật khẩu" required />
             <button className="btn-register-1" type="submit">Đăng ký</button>
         </form>
-        <p>Đã có tài khoản? <a href="/login">Đăng nhập</a></p>
+        <p>Đã có tài khoản? <Link to="/login">Đăng nhập</Link></p>
+
         </div>
   );
 }

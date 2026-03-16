@@ -1,7 +1,7 @@
 import "../styles/Authpage.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -47,7 +47,8 @@ export default function LoginPage() {
         <button className="btn-login-1" type="submit">Đăng nhập</button>
         {error && <div className="error-message" style={{color: 'red', marginTop: 8}}>{error}</div>}
       </form>
-      <p>Bạn chưa có tài khoản? <a href="/register">Đăng ký</a></p>
+      <p>Bạn chưa có tài khoản? <Link to="/register">Đăng ký</Link></p>
+
     </div>
   );
 }
