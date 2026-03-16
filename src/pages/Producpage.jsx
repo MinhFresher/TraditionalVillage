@@ -119,8 +119,8 @@ export default function ProductPage() {
         </div>
         <nav className="nav-links">
           <Link to="/">Trang chủ</Link>
-          <Link to="/introduce" className="active">Giới thiệu</Link>
-          <Link to="/products">Sản phẩm</Link>
+          <Link to="/introduce" >Giới thiệu</Link>
+          <Link to="/products" className="active">Sản phẩm</Link>
           <Link to="/activities">Hoạt động</Link>
           <Link to="/news">Tin tức</Link>
           <Link to="/gallery">Hình ảnh</Link>
@@ -329,11 +329,12 @@ export default function ProductPage() {
           <div className="footer-brand">
             <p>Chúng tôi mang đến trải nghiệm tham quan Ước Lễ thuận tiện nhất, với kế hoạch chu đáo và người dẫn đường thấu hiểu văn hóa địa phương.</p>
             <nav className="footer-nav">
-              <a href="/">Trang chủ</a>
-              <a href="/introduce">Giới thiệu</a>
-              <a href="/products">Sản phẩm</a>
-              <a href="/news">Tin tức</a>
-              <a href="/activities">Hoạt động</a>
+               <Link to="/">Trang chủ</Link>
+              <Link to="/introduce" >Giới thiệu</Link>
+              <Link to="/products" >Sản phẩm</Link>
+              <Link to="/activities">Hoạt động</Link>
+              <Link to="/news">Tin tức</Link>
+          <Link to="/gallery">Hình ảnh</Link>
             </nav>
           </div>
           <div className="footer-newsletter">
@@ -348,9 +349,9 @@ export default function ProductPage() {
         <div className="footer-bottom">
           <p>© 2026 Minh All rights reserved.</p>
           <div className="footer-legal">
-            <a href="/404">Terms</a>
-            <a href="/404">Privacy</a>
-            <a href="/404">Cookies</a>
+            <Link to="/404">Terms</Link>
+            <Link to="/404">Privacy</Link>
+            <Link to="/404">Cookies</Link>
           </div>
         </div>
       </footer>

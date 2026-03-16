@@ -69,9 +69,9 @@ export default function ActivitiesPage() {
           </div>
           <nav className="nav-links">
             <Link to="/">Trang chủ</Link>
-            <Link to="/introduce" className="active">Giới thiệu</Link>
+            <Link to="/introduce" >Giới thiệu</Link>
             <Link to="/products">Sản phẩm</Link>
-            <Link to="/activities">Hoạt động</Link>
+            <Link to="/activities" className="active">Hoạt động</Link>
             <Link to="/news">Tin tức</Link>
             <Link to="/gallery">Hình ảnh</Link>
           </nav>
@@ -218,7 +218,7 @@ export default function ActivitiesPage() {
             <p>Chúng tôi mang đến trải nghiệm tham quan Ước Lễ thuận tiện nhất, với kế hoạch chu đáo và người dẫn đường thấu hiểu văn hóa địa phương.</p>
             <nav className="footer-nav">
               <Link to="/">Trang chủ</Link>
-            <Link to="/introduce" className="active">Giới thiệu</Link>
+            <Link to="/introduce">Giới thiệu</Link>
             <Link to="/products">Sản phẩm</Link>
             <Link to="/activities">Hoạt động</Link>
             <Link to="/news">Tin tức</Link>
