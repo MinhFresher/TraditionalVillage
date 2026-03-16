@@ -1,0 +1,285 @@
+/* Base Styles */
+.introduce-container {
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  color: #000;
+  background-color: #fff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.nav-logo a{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #417D48;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 { margin: 0; }
+
+/* --- Hero Section --- */
+.intro-hero-section {
+  background-color: #417D48;
+  color: white;
+  padding: 8rem 2rem 4rem; /* Top padding leaves room for absolute navbar */
+}
+
+.intro-navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.btn-login-light {
+  background: #FFF4DC;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-register-brown {
+  background: #8B4513;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.intro-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.intro-hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.intro-hero-text h1 {
+  font-size: clamp(3rem, 5vw, 6rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.intro-hero-text p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.cert-badge {
+  display: inline-block;
+  background: white;
+  color: #741818;
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.intro-hero-images {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.img-small { width: 293px; height: 198px; border-radius: 30px; object-fit: cover; }
+.img-tall { width: 292px; height: 416px; border-radius: 30px; object-fit: cover; }
+
+/* --- Village Overview --- */
+/* --- Village Overview --- */
+.village-overview {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  gap: 4rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.overview-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.overview-text h2 {
+  font-size: 1.5rem;
+  color: #0F0202;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.overview-text p {
+  color: #2C2C2C;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.overview-video {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: black;
+  /* Giúp khung hình luôn ở tỷ lệ 16:9 */
+  aspect-ratio: 16 / 9; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.styled-video-iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Loại bỏ phần play-button cũ nếu bạn dùng trình phát mặc định của YouTube */
+.play-button-overlay {
+  display: none;
+}
+
+/* --- Core Values Section --- */
+.core-values-section {
+  background-color: #417D48;
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.core-values-section h2 { font-size: clamp(2rem, 4vw, 3.25rem); margin-bottom: 3rem; }
+.core-values-img { max-width: 100%; height: auto; border-radius: 16px; }
+
+/* --- Timeline Section --- */
+.timeline-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.timeline-section h2 { font-size: clamp(2rem, 4vw, 3.25rem); text-align: center; margin-bottom: 4rem; }
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.timeline-year {
+  color: #C55F00;
+  font-size: 4rem;
+  font-weight: 700;
+  min-width: 180px;
+  text-align: right;
+}
+
+.timeline-content h3 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.timeline-content p { font-size: 1.5rem; color: #2C2C2C; line-height: 1.4; }
+
+/* --- History Section --- */
+.history-section {
+  background-color: #417D48;
+  color: white;
+  padding: 6rem 2rem;
+}
+
+.history-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap-reverse;
+}
+
+.history-text { flex: 1; min-width: 300px; }
+.history-text h2 { font-size: clamp(2.5rem, 4vw, 3.25rem); margin-bottom: 1.5rem; }
+.history-text p { font-size: 1.1rem; line-height: 1.6; }
+
+.history-img { max-width: 100%; border-radius: 30px; flex: 1; min-width: 300px;}
+
+.history-divider { border: 0; height: 1px; background: #E9E9E9; max-width: 1200px; margin: 4rem auto; opacity: 0.5; }
+
+.founder-quote { max-width: 1171px; margin: 0 auto; text-align: center; }
+.quote-text { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.4; margin-bottom: 2rem; font-family: 'Outfit', sans-serif;}
+.quote-author h4 { font-size: 1.25rem; }
+.quote-author span { font-size: 1.1rem; opacity: 0.8; }
+
+/* --- Mission Section --- */
+.mission-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.mission-header { text-align: center; margin-bottom: 4rem; }
+.mission-header h2 { font-size: 3.25rem; font-family: 'Outfit', sans-serif; margin-bottom: 0.5rem; }
+.mission-header p { font-size: 1.1rem; color: #2C2C2C; }
+
+.mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+.mission-card {
+  padding: 2rem;
+  position: relative;
+}
+
+.quote-marks {
+  width: 40px; height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.mission-card p { font-size: 1.1rem; line-height: 1.6; color: #0F0202; margin-bottom: 1.5rem; }
+.mission-card h4 { font-size: 1.1rem; color: #0F0202; }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .intro-navbar { padding: 1.5rem 2rem; }
+  .timeline-item { flex-direction: column; gap: 1rem; }
+  .timeline-year { text-align: left; }
+}
+
+@media (max-width: 768px) {
+  .intro-navbar {
+    flex-direction: column;
+    gap: 1.5rem;
+    background: #417D48;
+    padding-bottom: 2rem;
+  }
+  
+  .intro-hero-section { padding-top: 12rem; }
+  .intro-hero-images { flex-direction: column; width: 100%; }
+  .img-small, .img-tall { width: 100%; height: auto; }
+}

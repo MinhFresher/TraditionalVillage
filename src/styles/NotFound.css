@@ -1,0 +1,78 @@
+.notfound-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f9fbf9; /* Very light green tint */
+  padding: 2rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.notfound-content {
+  max-width: 600px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.notfound-code {
+  font-size: 8rem;
+  font-weight: 800;
+  color: #417D48; /* Your theme green */
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -5px;
+}
+
+.notfound-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #8B4513; /* Your theme brown */
+  margin: 1.5rem auto;
+  border-radius: 2px;
+}
+
+.notfound-content h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.notfound-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.notfound-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn-back-outline {
+  background: transparent;
+  border: 2px solid #417D48;
+  color: #417D48;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-back-outline:hover {
+  background: #417D48;
+  color: white;
+}
+
+.village-decoration {
+  margin-top: 4rem;
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

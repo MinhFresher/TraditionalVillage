@@ -1,0 +1,315 @@
+/* Base Styles */
+.product-page-container {
+  font-family: 'Lato', 'DM Sans', sans-serif;
+  color: #333;
+  background-color: #fff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+/* --- Navbar (Light Version) --- */
+.light-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  background: white;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.nav-links { display: flex; gap: 2rem; }
+.nav-links a { color: #141414; text-decoration: none; font-size: 1rem; font-weight: 500; }
+.nav-links a.active { color: #8B4513; font-weight: 700; }
+
+.btn-login-light { background: #FFF4DC; color: black; padding: 0.75rem 1.5rem; border-radius: 40px; border: none; font-weight: 600; cursor: pointer; }
+.btn-register-brown { background: #8B4513; color: white; padding: 0.75rem 1.5rem; border-radius: 40px; border: none; font-weight: 600; cursor: pointer; }
+
+/* --- Search Bar --- */
+.search-section {
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(3, 64, 17, 0.1);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 720px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-btn {
+  background: #034011;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  display: flex; justify-content: center; align-items: center;
+  cursor: pointer;
+}
+.search-btn svg { width: 18px; height: 18px; }
+
+/* --- Products Section (With Flip Cards) --- */
+.products-section { padding: 4rem 2rem; max-width: 1280px; margin: 0 auto; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; margin-bottom: 4rem; }
+
+.product-wrapper { display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+/* 3D Flip Card Magic */
+.product-card {
+  background-color: transparent;
+  width: 100%;
+  max-width: 360px;
+  height: 450px;
+  perspective: 1000px; /* Gives the 3D effect */
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.product-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.product-card:hover .product-card-inner {
+  transform: rotateY(180deg);
+}
+
+.product-card-front, .product-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.product-card-front img { width: 100%; height: 100%; object-fit: cover; }
+
+.product-card-back {
+  background-color: #55B76B;
+  color: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.product-info h3 { font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 700;}
+.product-pricing { display: flex; gap: 1rem; justify-content: center; margin-bottom: 0.5rem; align-items: center; }
+.current-price { font-size: 1.5rem; font-weight: 800; }
+.old-price { font-size: 1.1rem; color: #767676; text-decoration: line-through; }
+.reviews { display: block; text-decoration: underline; margin-bottom: 1.5rem; color: #333; }
+
+.btn-buy {
+  background: #8B4513;
+  color: white;
+  padding: 0.75rem 2.5rem;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 3px solid #333;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.1s, border-width 0.1s;
+}
+.btn-buy:active { transform: translateY(3px); border-bottom-width: 0px; }
+
+.see-more-container { text-align: center; }
+.btn-see-more { background: #8B4513; color: white; padding: 1rem 3rem; border-radius: 5px; border: none; font-weight: 800; cursor: pointer; }
+
+/* --- About Banner --- */
+.about-banner {
+  padding: 6rem 2rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+.about-banner-content { max-width: 900px; margin: 0 auto; }
+.about-banner h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.about-intro { font-size: 1.1rem; line-height: 1.6; margin-bottom: 3rem; }
+
+.mission-vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem; text-align: left;}
+.mv-card h3 { font-size: 1.25rem; margin-bottom: 1rem; text-align: center; }
+.mv-card p { font-style: italic; line-height: 1.6; text-align: center; }
+
+/* --- Testimonials --- */
+.testimonials-section-light { padding: 6rem 2rem; max-width: 1280px; margin: 0 auto; text-align: center; }
+.testimonials-section-light h2 { font-size: 2.25rem; margin-bottom: 4rem; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+
+.testimonial-card-outline {
+  border: 2px solid #034011;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+}
+/* The 'Window' hides the overflow */
+.testimonials-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* The 'Track' must be a flex row, not a grid */
+.testimonials-track {
+  display: flex;
+  width: 100%;
+}
+
+.testimonial-card-outline {
+  flex: 0 0 33.333%; 
+  box-sizing: border-box;
+
+}
+.reviewer-img { width: 100px; height: 100px; border-radius: 50%; border: 1px solid #333; margin-bottom: 1rem; }
+.stars { color: #FFCE31; font-size: 1.5rem; margin-bottom: 1rem; }
+.testimonial-card-outline h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+.testimonial-card-outline p { font-size: 1rem; line-height: 1.6; }
+
+/* --- Articles --- */
+.articles-section { padding: 6rem 2rem; background: #417D48; color: white; text-align: center; }
+.articles-section h2 { font-size: 2.25rem; margin-bottom: 4rem; }
+.articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; max-width: 1280px; margin: 0 auto; }
+
+.article-card { background: white; color: #333; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding-bottom: 2rem;}
+.article-card img { width: 100%; height: 250px; object-fit: cover; margin-bottom: 1.5rem; }
+.article-content { padding: 0 2rem; display: flex; flex-direction: column; align-items: center; flex: 1;}
+.article-content h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+.article-content p { margin-bottom: 2rem; flex: 1; }
+
+/* --- Newsletter --- */
+.newsletter-section {
+  padding: 6rem 2rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+.newsletter-box {
+  background: white;
+  border-radius: 20px;
+  padding: 4rem;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.newsletter-text { flex: 1; }
+.newsletter-text h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #333; }
+.newsletter-text p { color: #8B4513; font-weight: 500; }
+
+.newsletter-form { flex: 1; display: flex; flex-direction: column; gap: 1rem; }
+.newsletter-form input {
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid #8B4513;
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* --- Toast Notification --- */
+.toast-notification {
+  position: fixed;
+  top: 100px; /* Below the navbar */
+  right: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  border-left: 6px solid #417D48; /* Your theme green */
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 9999;
+  animation: slideInLeft 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.toast-icon {
+  background: #417D48;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.toast-text h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #222;
+}
+
+.toast-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #ccc;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.toast-close:hover {
+  color: #888;
+}
+
+/* Slide in animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* --- Responsive Layouts --- */
+@media (max-width: 1024px) {
+  .mission-vision-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .newsletter-box { flex-direction: column; text-align: center; gap: 2rem; padding: 2rem;}
+}
+
+@media (max-width: 768px) {
+  .light-navbar { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+  .nav-links { flex-wrap: wrap; justify-content: center; }
+}

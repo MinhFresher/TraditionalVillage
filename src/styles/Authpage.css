@@ -1,0 +1,80 @@
+/* Auth Pages Styles - Login & Register */
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 2rem 2.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  color: #222;
+}
+
+.auth-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2a3a5c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form label {
+  font-weight: 500;
+  color: #2a5c49;
+}
+
+.auth-form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7f8fa;
+  transition: border-color 0.2s;
+}
+
+.auth-form input:focus {
+  border-color: #2a5c49;
+  outline: none;
+}
+
+.btn-login-1, .btn-register-1 {
+  padding: 0.75rem 0;
+  background: linear-gradient(90deg, #2a5c3a 60%, #417D48 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+
+.btn-login-1:hover, .btn-register-1:hover {
+  background: linear-gradient(90deg, #417D48 60%, #2e5c2a 100%);
+}
+
+.auth-container p {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #555;
+}
+
+.auth-container a {
+  color: #417D48;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.error-message {
+  color: #e53935;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
