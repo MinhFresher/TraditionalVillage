@@ -1,4 +1,4 @@
-# Ước Lễ UI/UX Project
+# UI/UX Project
 
 ## Giới thiệu
 Dự án này là một ứng dụng web được xây dựng bằng React, nhằm giới thiệu và quảng bá làng nghề truyền thống Ước Lễ. Ứng dụng cung cấp thông tin về lịch sử, sản phẩm, hoạt động và các giá trị văn hóa của làng.
