@@ -1,12 +1,13 @@
 import "../styles/Introducepage.css";
 import exampleImg1 from '../assets/lang-uoc-le-1.jpg';
 import exampleImg2 from '../assets/activities2.jpg';
-import logo from '../assets/react.svg';
 import exampleImg3 from '../assets/cho-lang-uoc-le-1.webp';
 import claimImage from '../assets/claim.png';
 import historyImg from '../assets/history.jpg';
 import { Link } from "react-router-dom";
 import { useState } from "react";
+
+import Navbar from "../components/Navbar";
 
 export default function IntroducePage() {
   const [notification, setNotification] = useState("");
@@ -20,23 +21,7 @@ export default function IntroducePage() {
     <div className="introduce-container">
       {/* Navbar & Hero Section */}
       <section className="intro-hero-section">
-        <header className="navbar intro-navbar">
-          <div className="nav-logo">
-            <img src={logo} alt="Logo" style={{width: 50}}/>
-          </div>
-          <nav className="nav-links">
-            <Link to="/">Trang chủ</Link>
-            <Link to="/introduce" className="active">Giới thiệu</Link>
-            <Link to="/products">Sản phẩm</Link>
-            <Link to="/activities">Hoạt động</Link>
-            <Link to="/news">Tin tức</Link>
-            <Link to="/gallery">Hình ảnh</Link>
-          </nav>
-          <div className="nav-actions">
-            <Link to="/login"><button className="btn-login-light">Đăng nhập</button></Link>
-            <Link to="/register"><button className="btn-register-brown">Đăng ký</button></Link>
-          </div>
-        </header>
+        <Navbar />
 
         <div className="intro-hero-content">
           <div className="intro-hero-text">

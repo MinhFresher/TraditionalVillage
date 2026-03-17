@@ -27,39 +27,7 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-.navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 4rem;
-  box-sizing: border-box;
-  z-index: 10;
-}
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: opacity 0.2s;
-}
-
-.nav-links a:hover {
-  opacity: 0.8;
-}
-
-.nav-actions {
-  display: flex;
-  gap: 1rem;
-}
 
 .btn-login, .btn-register, .btn-primary, .btn-secondary, .btn-primary-dark {
   padding: 0.75rem 1.5rem;
@@ -75,10 +43,37 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
 }
 
-.btn-login { background: transparent; color: white; border: 1px solid transparent; }
-.btn-login:hover { border: 1px solid white; }
-.btn-register { background: black; color: white; }
-.btn-primary { background: rgba(3, 64, 17, 0.8); color: white; margin-top: 2rem; }
+.btn-login {
+  background: transparent;
+  color: white;
+  border: 1px solid transparent;
+}
+
+.btn-login:hover {
+  border: 1px solid white;
+}
+
+.btn-register {
+  background: black;
+  color: white;
+}
+
+.btn-primary {
+  background: rgba(3, 64, 17, 0.8);
+  color: white;
+  margin-top: 2rem;
+}
+
+.btn-secondary {
+  border: 1px solid #4F4F53;
+  background: transparent;
+  color: #4F4F53;
+}
+
+.btn-primary-dark {
+  background: black;
+  color: white;
+}
 
 .hero-title {
   font-family: 'Ephesis', cursive;
@@ -422,12 +417,113 @@ h1, h2, h3, h4 {
   display: flex;
   gap: 2rem;
   width: max-content; /* Important: makes the track as wide as all cards */
-  animation: scrollTestimonials 30s linear infinite;
+  animation: scrollTestimonials 15s linear infinite;
 }
 
 /* 3. Pause the animation when user hovers to read */
 .testimonials-track:hover {
   animation-play-state: paused;
+}
+
+/* --- Hamburger Button --- */
+.hamburger {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* --- Mobile Drawer Responsive --- */
+@media (max-width: 768px) {
+  /* FIX: Forces Logo and Hamburger to stay on one line */
+  .navbar {
+    flex-direction: row !important; 
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+  }
+
+  .hamburger { display: flex; }
+  .desktop-only { display: none; }
+  .mobile-only { display: flex; }
+
+  /* Drawer setup */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Hidden off-screen */
+    width: 280px;
+    height: 100vh;
+    background: #417D48; /* Your Brand Green */
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding:  2rem 2rem;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1050;
+    gap: 1.5rem;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+  }
+
+  .nav-links.open {
+    left: 0; /* Slide into view */
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity: 0; }
+  .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  /* Drawer Action Buttons */
+  .drawer-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Overlay Background */
+  .nav-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    z-index: 1040;
+  }
+
+  .nav-drawer-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Push hero down on mobile */
+  .hero-content { margin-top: 4rem; }
 }
 
 /* 4. The Animation Logic */
@@ -461,9 +557,6 @@ h1, h2, h3, h4 {
   }
 }
 @media (max-width: 1024px) {
-  .navbar {
-    padding: 1.5rem 2rem;
-  }
   
   .about-section {
     gap: 2rem;
@@ -484,21 +577,6 @@ h1, h2, h3, h4 {
     padding: 2rem 1.5rem;
   }
 
-  /* Navbar adjustments - Stacks nicely on top */
-  .navbar {
-    flex-direction: column;
-    gap: 1.5rem;
-    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-    padding-bottom: 2rem;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  /* Push hero content down so the stacked navbar doesn't cover it */
   .hero-content {
     margin-top: 6rem; 
   }

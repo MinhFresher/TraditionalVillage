@@ -9,23 +9,7 @@
 
 h1, h2, h3, h4 { margin: 0; }
 
-/* --- Header & Navbar --- */
-.gallery-header-bg {
-  background-color: #417D48;
-  padding-bottom: 2rem;
-}
 
-.transparent-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 4rem;
-}
-
-.nav-links { display: flex; gap: 2rem; }
-.nav-links a { color: white; text-decoration: none; font-size: 1rem; font-weight: 400; }
-.nav-links a.active { font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
-.nav-logo { color: white; font-size: 1.2rem; font-weight: 600;}
 
 .btn-login-light { background: #FFF4DC; color: black; padding: 0.75rem 1.5rem; border-radius: 40px; border: none; font-weight: 600; cursor: pointer; }
 .btn-register-brown { background: #8B4513; color: white; padding: 0.75rem 1.5rem; border-radius: 40px; border: none; font-weight: 600; cursor: pointer; }
@@ -313,15 +297,11 @@ h1, h2, h3, h4 { margin: 0; }
 
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
-  .transparent-navbar { padding: 1.5rem 2rem; }
   .video-player-wrapper { height: 400px; }
   .media-cta-section { flex-direction: column; text-align: center; }
 }
 
 @media (max-width: 768px) {
-  .transparent-navbar { flex-direction: column; gap: 1.5rem; }
-  .nav-links { flex-wrap: wrap; justify-content: center; }
-  
   .gallery-main-content { margin-top: -2rem; }
   .highlight-img { height: 250px; }
   .video-player-wrapper { height: 250px; }

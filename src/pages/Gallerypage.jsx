@@ -10,7 +10,8 @@ import galleryImg5 from '../assets/lang-uoc-le-5_1675866390.jpeg';
 import galleryImg6 from '../assets/lang-uoc-le-6_1675866417.jpg';
 import galleryImg7 from '../assets/lang-uoc-le-8_1675866479.jpeg';
 import galleryImg8 from '../assets/activities2.jpg';
-import logo from '../assets/react.svg';
+
+import Navbar from "../components/Navbar";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -46,23 +47,7 @@ export default function GalleryPage() {
     <div className="gallery-page-container">
       {/* Header & Navbar */}
       <div className="gallery-header-bg" >
-        <header className="navbar transparent-navbar" style={{backgroundColor: '#417D48'}}>
-          <div className="nav-logo">
-            <img src={logo} alt="Logo" style={{width: 50}}/>
-          </div>
-          <nav className="nav-links">
-            <Link to="/">Trang chủ</Link>
-            <Link to="/introduce">Giới thiệu</Link>
-            <Link to="/products">Sản phẩm</Link>
-            <Link to="/activities">Hoạt động</Link>
-            <Link to="/news">Tin tức</Link>
-            <Link to="/gallery" className="active">Hình ảnh</Link>
-          </nav>
-          <div className="nav-actions">
-            <Link to="/login"><button className="btn-login-light">Đăng nhập</button></Link>
-            <Link to="/register"><button className="btn-register-brown">Đăng ký</button></Link>
-          </div>
-        </header>
+        <Navbar />
       </div>
 
       <div className="gallery-title-wrapper">

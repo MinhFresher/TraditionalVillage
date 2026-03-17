@@ -1,5 +1,4 @@
 import "../styles/Articlepage.css";
-import logo from '../assets/react.svg';
 import mainImg from '../assets/lang-uoc-le-1.jpg';
 import activity1 from "../assets/activities1.jpg"
 import activity2 from "../assets/activities2.jpg"
@@ -8,6 +7,8 @@ import uocle1 from '../assets/lang-uoc-le-5_1675866390.jpeg';
 import uocle2 from '../assets/lang-uoc-le-8_1675866479.jpeg';
 import uocle3 from '../assets/lang-uoc-le-6_1675866417.jpg';
 import uocle4 from '../assets/history.jpg';
+
+import Navbar from "../components/Navbar";
 
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -55,23 +56,7 @@ export default function ArticlePage() {
   return (
     <div className="activities-container">
       {/* Navbar */}
-      <header className="navbar light-navbar" style={{backgroundColor: '#417D48'}}>
-        <div className="nav-logo">
-          <img src={logo} alt="Logo" style={{width: 50}}/>
-        </div>
-        <nav className="nav-links">
-          <Link to="/">Trang chủ</Link>
-          <Link to="/introduce" className="active">Giới thiệu</Link>
-          <Link to="/products">Sản phẩm</Link>
-          <Link to="/activities">Hoạt động</Link>
-          <Link to="/news">Tin tức</Link>
-          <Link to="/gallery">Hình ảnh</Link>
-        </nav>
-        <div className="nav-actions">
-          <Link to="/login"><button className="btn-login-light">Đăng nhập</button></Link>
-          <Link to="/register"><button className="btn-register-brown">Đăng ký</button></Link>
-        </div>
-      </header>
+        <Navbar />
 
       {/* Hero Section */}
       <section className="activities-hero" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${mainImg})`, marginTop: 100 }}>

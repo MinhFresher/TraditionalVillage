@@ -10,9 +10,10 @@ import chacom from '../assets/chacom.jpg';
 import uocle1 from '../assets/activities2.jpg';
 import uocle2 from '../assets/lang-uoc-le-5.jpg';
 import uocle3 from '../assets/lang-uoc-le-3.jpg';
-import logo from '../assets/react.svg';
 
 import { Link, useNavigate} from "react-router-dom";
+
+import Navbar from "../components/Navbar";
 
 import { useState, useEffect } from 'react';
 
@@ -113,24 +114,7 @@ export default function ProductPage() {
   return (
     <div className="product-page-container">
       {/* Navbar */}
-      <header className="navbar light-navbar" style={{backgroundColor: '#417D48'}}>
-        <div className="nav-logo">
-            <img src={logo} alt="Logo" style={{width: 50}}/>
-        </div>
-        <nav className="nav-links">
-          <Link to="/">Trang chủ</Link>
-          <Link to="/introduce" >Giới thiệu</Link>
-          <Link to="/products" className="active">Sản phẩm</Link>
-          <Link to="/activities">Hoạt động</Link>
-          <Link to="/news">Tin tức</Link>
-          <Link to="/gallery">Hình ảnh</Link>
-        </nav>
-        <div className="nav-actions">
-          <Link to="/login"><button className="btn-login-light">Đăng nhập</button></Link>
-          <Link to="/register"><button className="btn-register-brown">Đăng ký</button></Link>
-        </div>
-      </header>
-
+      <Navbar />
       {/* Search Bar */}
       <section className="search-section" style={{marginTop: 100}}>
         <div className="search-bar">
@@ -252,7 +236,7 @@ export default function ProductPage() {
             className="testimonials-track"
             style={{ 
                 transform: `translateX(-${testimonialIndex * 33.333}%)`, 
-                transition: 'transform 0.5s ease-in-out',
+                transition: 'transform 0.2s ease-in-out',
                 display: 'flex' 
             }}
           >

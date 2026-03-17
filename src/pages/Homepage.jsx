@@ -8,6 +8,9 @@ import aboutImage from '../assets/lang-uoc-le-1.jpg';
 import avatarJordan from '../assets/example.png';
 import avatarTaylor from '../assets/example.png';
 import avatarAvery from '../assets/example.png';
+
+import Navbar from "../components/Navbar";
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -48,23 +51,7 @@ export default function Homepage() {
         className="hero-section" 
         style={{ backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%), url(${heroBg})` }}
       >
-        <header className="navbar">
-          <div className="nav-logo">
-            <img src={heroBg} alt="Logo" style={{width: 50}}/>
-          </div>
-          <nav className="nav-links">
-            <Link to="/" className="active">Trang chủ</Link>
-            <Link to="/introduce">Giới thiệu</Link>
-            <Link to="/products">Sản phẩm</Link>
-            <Link to="/activities">Hoạt động</Link>
-            <Link to="/news">Tin tức</Link>
-            <Link to="/gallery">Hình ảnh</Link>
-          </nav>
-          <div className="nav-actions">
-            <Link to="/login"><button className="btn-login">Đăng nhập</button></Link>
-            <Link to="/register"><button className="btn-register">Đăng ký</button></Link>
-          </div>
-        </header>
+        <Navbar />
 
         <div className="hero-content">
           <h1 className="hero-title">Khám phá vẻ đẹp &amp;<br/>văn hóa làng Ước Lễ</h1>

@@ -8,8 +8,9 @@ import cardImg4 from '../assets/activities2.jpg';
 import cardSmall1 from '../assets/Hero-image.webp';
 import cardSmall2 from '../assets/Hero-image.webp';
 import cardSmall3 from '../assets/Hero-image.webp';
-import logo from '../assets/react.svg';
 import cardSmall4 from '../assets/Hero-image.webp';
+
+import Navbar from "../components/Navbar";
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -63,31 +64,15 @@ export default function ActivitiesPage() {
     <div className="activities-booking-container">
       {/* Header Section */}
       <div className="activities-header-bg">
-        <header className="navbar transparent-navbar">
-          <div className="nav-logo">
-            <img src={logo} alt="Logo" style={{width: 50}}/>
-          </div>
-          <nav className="nav-links">
-            <Link to="/">Trang chủ</Link>
-            <Link to="/introduce" >Giới thiệu</Link>
-            <Link to="/products">Sản phẩm</Link>
-            <Link to="/activities" className="active">Hoạt động</Link>
-            <Link to="/news">Tin tức</Link>
-            <Link to="/gallery">Hình ảnh</Link>
-          </nav>
-          <div className="nav-actions">
-            <Link to="/login"><button className="btn-login-light">Đăng nhập</button></Link>
-            <Link to="/register"><button className="btn-register-brown">Đăng ký</button></Link>
-          </div>
-        </header>
+        <Navbar/>
 
-        <div className="activities-title-wrapper">
+        <div className="activities-title-wrapper"  style={{marginTop: 100}}>
           <h1 style={{marginTop: 50}}>Hoạt động &amp; Trải nghiệm<br />Đắm mình vào cuộc sống làng quê truyền thống</h1>
         </div>
       </div>
 
       {/* Main Workshops Content */}
-      <main className="workshops-main-content" style={{marginTop: 20}}>
+      <main className="workshops-main-content" style={{marginTop: 80}}>
         {/* Featured Workshop - Synchronized with theme */}
         <section className="featured-workshop">
           <img src={mainImg} alt="Featured" className="featured-workshop-img" />

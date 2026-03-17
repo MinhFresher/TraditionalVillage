@@ -12,20 +12,6 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-/* --- Navbar (Light Version) --- */
-.light-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 4rem;
-  background: white;
-  border-bottom: 1px solid #eaeaea;
-}
-
-.nav-links { display: flex; gap: 2rem; }
-.nav-links a { color: #141414; text-decoration: none; font-size: 1rem; font-weight: 500; }
-.nav-links a.active { color: #8B4513; font-weight: 700; }
-
 .btn-login-light { background: #FFF4DC; color: black; padding: 0.75rem 1.5rem; border-radius: 40px; border: none; font-weight: 600; cursor: pointer; }
 .btn-register-brown { background: #8B4513; color: white; padding: 0.75rem 1.5rem; border-radius: 40px; border: none; font-weight: 600; cursor: pointer; }
 
@@ -240,7 +226,7 @@ h1, h2, h3, h4 {
 /* --- Toast Notification --- */
 .toast-notification {
   position: fixed;
-  top: 100px; /* Below the navbar */
+  top: 100px; 
   right: 20px;
   background-color: white;
   display: flex;
@@ -309,7 +295,43 @@ h1, h2, h3, h4 {
   .newsletter-box { flex-direction: column; text-align: center; gap: 2rem; padding: 2rem;}
 }
 
+
+@media (max-width: 1024px) {
+  /* Show 2 cards by expanding the window's viewable area math-wise */
+  .testimonials-window {
+    width: 100%; 
+  }
+  
+  .testimonial-card-outline {
+    /* We keep the 33% but scale the text/padding to fit tablet */
+    padding: 0.75rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .light-navbar { flex-direction: column; gap: 1rem; padding: 1.5rem; }
-  .nav-links { flex-wrap: wrap; justify-content: center; }
+  .testimonials-section-light {
+    padding: 3rem 1rem;
+  }
+
+  .testimonials-section-light h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  /* NOTE: Since your JS moves by 33.33% increments, 
+     on mobile we keep the card at 33.33% but we make the 
+     WINDOW 300% wider than the screen so that 33.33% of 300% = 100% width.
+  */
+  .testimonials-window {
+    width: 100%;
+  }
+
+  .testimonial-card-outline {
+    flex: 0 0 100% !important; /* Overriding for mobile swipe feel */
+  }
+  
+  /* If you want to keep the 33% logic exactly as is but show 1 card: */
+  .testimonials-track {
+     /* This ensures that when the JS moves 33%, it moves a full mobile screen */
+  }
 }
