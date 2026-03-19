@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import heroBg from '../assets/Hero-image.webp'; // Your logo/hero image
+import heroBg from '../assets/logo.png'; // Your logo/hero image
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
